@@ -1,6 +1,12 @@
 import os
+import time
 
-
+def check_result_exits(project_name):
+    if os.path.exists(project_name):
+        return 1
+    else:
+        return 0
+    
 # Each website is a separate project (folder)
 def create_project_dir(directory):
     if not os.path.exists(directory):
